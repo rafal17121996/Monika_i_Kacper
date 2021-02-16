@@ -34851,12 +34851,12 @@ __webpack_unused_export__ = ({
 
 var _InfoWindow = __webpack_require__(4844)
 
-__webpack_unused_export__ = ({
+Object.defineProperty(exports, "nx", ({
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_InfoWindow).default
   },
-})
+}))
 
 var _OverlayView = __webpack_require__(1764)
 
@@ -41169,8 +41169,12 @@ var MenuItems = [{
   url: 'music',
   cName: 'nav-links'
 }, {
-  title: 'PO WESELU',
-  url: 'after',
+  title: 'KONTAKT',
+  url: 'contact',
+  cName: 'nav-links'
+}, {
+  title: 'GALERIA',
+  url: 'gallery',
   cName: 'nav-links'
 }];
 ;// CONCATENATED MODULE: ./src/components/Navbar/Navbar.module.scss
@@ -41346,6 +41350,8 @@ var lib = __webpack_require__(3458);
 var Map_style = (0,bem_css_modules/* default */.Z)(Map_module);
 
 function Mapa(props) {
+  var [open, setOpen] = (0,react.useState)(false);
+  var [open2, setOpen2] = (0,react.useState)(false);
   return /*#__PURE__*/react.createElement(lib/* GoogleMap */.b6, {
     defaultZoom: 10,
     defaultCenter: {
@@ -41353,11 +41359,30 @@ function Mapa(props) {
       lng: 17.39493838295808
     }
   }, /*#__PURE__*/react.createElement(lib/* Marker */.Jx, {
+    onClick: () => {
+      setOpen2(true);
+    },
     position: {
       lat: 52.58527977198758,
       lng: 17.39493838295808
     }
-  }));
+  }, open2 && /*#__PURE__*/react.createElement(lib/* InfoWindow */.nx, {
+    onCloseClick: () => {
+      setOpen2(false);
+    }
+  }, /*#__PURE__*/react.createElement("div", null, "Sala"))), /*#__PURE__*/react.createElement(lib/* Marker */.Jx, {
+    onClick: () => {
+      setOpen(true);
+    },
+    position: {
+      lat: 52.592565439263026,
+      lng: 17.26062372076317
+    }
+  }, open && /*#__PURE__*/react.createElement(lib/* InfoWindow */.nx, {
+    onCloseClick: () => {
+      setOpen(false);
+    }
+  }, /*#__PURE__*/react.createElement("div", null, "Ko\u015Bci\xF3\u0142"))));
 }
 
 var WrappedMap = (0,lib/* withScriptjs */.WS)((0,lib/* withGoogleMap */.OI)(Mapa));
@@ -41367,7 +41392,7 @@ var Map_Map = () => {
 
   var handleScroll = () => setOffset(window.pageYOffset);
 
-  window.addEventListener('scroll', handleScroll);
+  window.addEventListener("scroll", handleScroll);
   console.log(offset * 0.7);
   var mystyle = {
     backgroundPositionY: offset * 0.7 + "px"
@@ -41385,7 +41410,7 @@ var Map_Map = () => {
     className: Map_style("location")
   }, /*#__PURE__*/react.createElement("h2", null, "\u015Alub odb\u0119dzie si\u0119"), /*#__PURE__*/react.createElement("p", null, "14.08.2021 o godz. 16:00 ", /*#__PURE__*/react.createElement("br", null), "W Ko\u015Bciele pw. \u015Bw. Jerzego w Sopocie ", /*#__PURE__*/react.createElement("br", null), "Przy ul. Tadeusza Ko\u015Bciuszki 1")), /*#__PURE__*/react.createElement("div", {
     className: Map_style("location")
-  }, /*#__PURE__*/react.createElement("h2", null, "Po ceremonii ko\u015Bcielnej"), /*#__PURE__*/react.createElement("p", null, "zapraszamy na przyj\u0119cie weselne, kt\xF3re odb\u0119dzie si\u0119 ", /*#__PURE__*/react.createElement("br", null), "  w Restauracji Unicorn na terenie Hipodromu w Sopocie ", /*#__PURE__*/react.createElement("br", null), " Przy ul. W\u0142adys\u0142awa \u0141okietka 1")), /*#__PURE__*/react.createElement("div", {
+  }, /*#__PURE__*/react.createElement("h2", null, "Po ceremonii ko\u015Bcielnej"), /*#__PURE__*/react.createElement("p", null, "zapraszamy na przyj\u0119cie weselne, kt\xF3re odb\u0119dzie si\u0119 ", /*#__PURE__*/react.createElement("br", null), " w Restauracji Unicorn na terenie Hipodromu w Sopocie ", /*#__PURE__*/react.createElement("br", null), " Przy ul. W\u0142adys\u0142awa \u0141okietka 1")), /*#__PURE__*/react.createElement("div", {
     className: Map_style("map")
   }, /*#__PURE__*/react.createElement(WrappedMap, {
     googleMapURL: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyBtH3x10QgQaasPBEz8oXcxM-CBL-Iog-0",
@@ -75065,15 +75090,71 @@ var Music_Music = () => {
 var Photos_style = (0,bem_css_modules/* default */.Z)(Photos_module);
 
 var Photos = () => {
-  return /*#__PURE__*/react.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: Photos_style('')
   }, "reszta strony");
 };
 
-/* harmony default export */ const Photos_Photos = (Photos);
+/* harmony default export */ const Photos_Photos = ((/* unused pure expression or super */ null && (Photos)));
+;// CONCATENATED MODULE: ./src/components/Gallery/Gallery.module.scss
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const Gallery_module = ({"Gallery":"Gallery"});
+;// CONCATENATED MODULE: ./src/components/Gallery/Gallery.jsx
+
+
+
+var Gallery_style = (0,bem_css_modules/* default */.Z)(Gallery_module);
+
+var Gallery = () => {
+  return /*#__PURE__*/react.createElement("div", {
+    id: "gallery",
+    className: Gallery_style('')
+  }, /*#__PURE__*/react.createElement("img", {
+    className: true,
+    src: "https://img.icons8.com/carbon-copy/100/000000/camera--v1.png"
+  }), /*#__PURE__*/react.createElement("h2", null, "Zajrzyjcie tu tak\u017Ce po \u015Blubie!"), /*#__PURE__*/react.createElement("p", null, "Gdy tylko otrzymamy zdj\u0119cia i film z uroczysto\u015Bci umie\u015Bcimy je na stronie, dzi\u0119ki czemu b\u0119dziecie mieli mo\u017Cliwo\u015B\u0107 obejrze\u0107 je oraz pobra\u0107."));
+};
+
+/* harmony default export */ const Gallery_Gallery = (Gallery);
+;// CONCATENATED MODULE: ./src/components/Contact/Contact.module.scss
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const Contact_module = ({"Contact":"Contact","Contact__wrapper":"Contact__wrapper","Contact__left":"Contact__left","Contact__right":"Contact__right","Contact__location":"Contact__location","Contact__title":"Contact__title"});
+;// CONCATENATED MODULE: ./src/assets/bride.png
+/* harmony default export */ const bride = (__webpack_require__.p + "a584441468394ca50c2dcc7372155cbf.png");
+;// CONCATENATED MODULE: ./src/components/Contact/Contact.jsx
+
+
+
+var Contact_style = (0,bem_css_modules/* default */.Z)(Contact_module);
+
+
+var Contact = () => {
+  return /*#__PURE__*/react.createElement("div", {
+    id: "contact",
+    className: Contact_style("")
+  }, /*#__PURE__*/react.createElement("div", {
+    className: Contact_style("wrapper")
+  }, /*#__PURE__*/react.createElement("div", {
+    className: Contact_style("left")
+  }, "dsadas"), /*#__PURE__*/react.createElement("div", {
+    className: Contact_style("right")
+  }, /*#__PURE__*/react.createElement("div", {
+    className: Contact_style("location")
+  }, /*#__PURE__*/react.createElement("img", {
+    src: "https://img.icons8.com/ios-filled/50/000000/bride.png"
+  }), /*#__PURE__*/react.createElement("h2", null, "Panna M\u0142oda"), /*#__PURE__*/react.createElement("p", null, "Monika Czerwi\u0144ska ", /*#__PURE__*/react.createElement("br", null), "telefon: 743 432 423")), /*#__PURE__*/react.createElement("div", {
+    className: Contact_style("location")
+  }, /*#__PURE__*/react.createElement("img", {
+    src: "https://img.icons8.com/ios/50/000000/groom.png"
+  }), /*#__PURE__*/react.createElement("h2", null, "Pan M\u0142ody"), /*#__PURE__*/react.createElement("p", null, "Kacper \u0141yszczarz", /*#__PURE__*/react.createElement("br", null), "telefon: 743 432 423")))));
+};
+
+/* harmony default export */ const Contact_Contact = (Contact);
 ;// CONCATENATED MODULE: ./src/App.jsx
 
  // import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+
 
 
 
@@ -75111,7 +75192,7 @@ var App = () => {
   }, /*#__PURE__*/react.createElement(Switch, null, /*#__PURE__*/react.createElement(Route, {
     path: "/",
     exact: true,
-    render: () => /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement(Navbar_Navbar, null), /*#__PURE__*/react.createElement(components_Home_Home, null), /*#__PURE__*/react.createElement(components_Map_Map, null), /*#__PURE__*/react.createElement(components_Music_Music, null), /*#__PURE__*/react.createElement(Photos_Photos, null))
+    render: () => /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement(Navbar_Navbar, null), /*#__PURE__*/react.createElement(components_Home_Home, null), /*#__PURE__*/react.createElement(components_Map_Map, null), /*#__PURE__*/react.createElement(components_Music_Music, null), /*#__PURE__*/react.createElement(Contact_Contact, null), /*#__PURE__*/react.createElement(Gallery_Gallery, null))
   })))));
 };
 
