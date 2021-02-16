@@ -41252,7 +41252,7 @@ var Navbar = () => {
 /* harmony default export */ const Navbar_Navbar = (Navbar);
 ;// CONCATENATED MODULE: ./src/components/Home/Home.module.scss
 // extracted by mini-css-extract-plugin
-/* harmony default export */ const Home_module = ({"Home":"Home","Home__timer":"Home__timer","Home__title":"Home__title","Home__countdown":"Home__countdown"});
+/* harmony default export */ const Home_module = ({"Home":"Home","Home__timer":"Home__timer","Home__wrapper":"Home__wrapper","Home__title":"Home__title","Home__countdown":"Home__countdown"});
 ;// CONCATENATED MODULE: ./src/assets/Home.jpg
 /* harmony default export */ const Home = (__webpack_require__.p + "7ba22eeec9fb404854bbb56200ffba1a.jpg");
 ;// CONCATENATED MODULE: ./src/components/Home/Home.jsx
@@ -41267,6 +41267,11 @@ var Home_Home = () => {
   var [timerHours, setTimerHours] = (0,react.useState)('00');
   var [timerMinutes, setTimerMinutes] = (0,react.useState)('00');
   var [timerSecounds, setTimerSecounds] = (0,react.useState)('00');
+  var [offset, setOffset] = (0,react.useState)();
+
+  var handleScroll = () => setOffset(window.pageYOffset);
+
+  window.addEventListener('scroll', handleScroll);
   var intervar = (0,react.useRef)();
 
   var startTimer = () => {
@@ -41308,18 +41313,23 @@ var Home_Home = () => {
       clearInterval(intervar.current);
     };
   });
+  var mystyle = {
+    backgroundImage: "url(".concat(Home, ")"),
+    backgroundPositionY: offset * 0.7 + "px"
+  };
   return /*#__PURE__*/react.createElement("section", {
-    style: {
-      backgroundImage: "url(".concat(Home, ")")
-    },
+    id: "home",
+    style: mystyle,
     className: Home_style("")
   }, /*#__PURE__*/react.createElement("div", {
     className: Home_style("timer")
   }, /*#__PURE__*/react.createElement("div", {
+    className: Home_style("wrapper")
+  }, /*#__PURE__*/react.createElement("div", {
     className: Home_style("title")
   }, /*#__PURE__*/react.createElement("h2", null, "\u015Alub Moniki i Kacpra"), /*#__PURE__*/react.createElement("p", null, "Odlicznie do najwaszniejszego dnia w naszym \u017Cyciu!")), /*#__PURE__*/react.createElement("div", {
     className: Home_style("countdown")
-  }, /*#__PURE__*/react.createElement("section", null, /*#__PURE__*/react.createElement("p", null, timerDays), /*#__PURE__*/react.createElement("p", null, /*#__PURE__*/react.createElement("small", null, "Dni"))), /*#__PURE__*/react.createElement("span", null, ":"), /*#__PURE__*/react.createElement("section", null, /*#__PURE__*/react.createElement("p", null, timerHours), /*#__PURE__*/react.createElement("p", null, /*#__PURE__*/react.createElement("small", null, "Godziny"))), /*#__PURE__*/react.createElement("span", null, ":"), /*#__PURE__*/react.createElement("section", null, /*#__PURE__*/react.createElement("p", null, timerMinutes), /*#__PURE__*/react.createElement("p", null, /*#__PURE__*/react.createElement("small", null, "Minuty"))), /*#__PURE__*/react.createElement("span", null, ":"), /*#__PURE__*/react.createElement("section", null, /*#__PURE__*/react.createElement("p", null, timerSecounds), /*#__PURE__*/react.createElement("p", null, /*#__PURE__*/react.createElement("small", null, "Sekundy"))))));
+  }, /*#__PURE__*/react.createElement("section", null, /*#__PURE__*/react.createElement("p", null, timerDays), /*#__PURE__*/react.createElement("p", null, /*#__PURE__*/react.createElement("small", null, "Dni"))), /*#__PURE__*/react.createElement("span", null, ":"), /*#__PURE__*/react.createElement("section", null, /*#__PURE__*/react.createElement("p", null, timerHours), /*#__PURE__*/react.createElement("p", null, /*#__PURE__*/react.createElement("small", null, "Godziny"))), /*#__PURE__*/react.createElement("span", null, ":"), /*#__PURE__*/react.createElement("section", null, /*#__PURE__*/react.createElement("p", null, timerMinutes), /*#__PURE__*/react.createElement("p", null, /*#__PURE__*/react.createElement("small", null, "Minuty"))), /*#__PURE__*/react.createElement("span", null, ":"), /*#__PURE__*/react.createElement("section", null, /*#__PURE__*/react.createElement("p", null, timerSecounds), /*#__PURE__*/react.createElement("p", null, /*#__PURE__*/react.createElement("small", null, "Sekundy")))))));
 };
 
 /* harmony default export */ const components_Home_Home = (Home_Home);
@@ -41353,7 +41363,17 @@ function Mapa(props) {
 var WrappedMap = (0,lib/* withScriptjs */.WS)((0,lib/* withGoogleMap */.OI)(Mapa));
 
 var Map_Map = () => {
+  var [offset, setOffset] = (0,react.useState)();
+
+  var handleScroll = () => setOffset(window.pageYOffset);
+
+  window.addEventListener('scroll', handleScroll);
+  console.log(offset * 0.7);
+  var mystyle = {
+    backgroundPositionY: offset * 0.7 + "px"
+  };
   return /*#__PURE__*/react.createElement("div", {
+    id: "route",
     className: Map_style("")
   }, /*#__PURE__*/react.createElement("div", {
     className: Map_style("wrapper")
@@ -74977,6 +74997,11 @@ var Music_Music = () => {
     artist: ""
   });
   var [errors, setErrors] = (0,react.useState)("");
+  var [offset, setOffset] = (0,react.useState)();
+
+  var handleScroll = () => setOffset(window.pageYOffset);
+
+  window.addEventListener('scroll', handleScroll);
 
   var handleOnSubmit = e => {
     e.preventDefault();
@@ -75001,10 +75026,12 @@ var Music_Music = () => {
     }));
   };
 
+  var mystyle = {
+    backgroundImage: "url(".concat(Music, ")")
+  };
   return /*#__PURE__*/react.createElement("div", {
-    style: {
-      backgroundImage: "url(".concat(Music, ")")
-    },
+    id: "music",
+    style: mystyle,
     className: Music_style("")
   }, /*#__PURE__*/react.createElement("h1", {
     className: Music_style("title")
@@ -75028,9 +75055,26 @@ var Music_Music = () => {
 };
 
 /* harmony default export */ const components_Music_Music = (Music_Music);
+;// CONCATENATED MODULE: ./src/components/Photos/Photos.module.scss
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const Photos_module = ({"Photos":"Photos"});
+;// CONCATENATED MODULE: ./src/components/Photos/Photos.jsx
+
+
+
+var Photos_style = (0,bem_css_modules/* default */.Z)(Photos_module);
+
+var Photos = () => {
+  return /*#__PURE__*/react.createElement("div", {
+    className: Photos_style('')
+  }, "reszta strony");
+};
+
+/* harmony default export */ const Photos_Photos = (Photos);
 ;// CONCATENATED MODULE: ./src/App.jsx
 
  // import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 
 
 
@@ -75067,7 +75111,7 @@ var App = () => {
   }, /*#__PURE__*/react.createElement(Switch, null, /*#__PURE__*/react.createElement(Route, {
     path: "/",
     exact: true,
-    render: () => /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement(Navbar_Navbar, null), /*#__PURE__*/react.createElement(components_Home_Home, null), /*#__PURE__*/react.createElement(components_Map_Map, null), /*#__PURE__*/react.createElement(components_Music_Music, null))
+    render: () => /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement(Navbar_Navbar, null), /*#__PURE__*/react.createElement(components_Home_Home, null), /*#__PURE__*/react.createElement(components_Map_Map, null), /*#__PURE__*/react.createElement(components_Music_Music, null), /*#__PURE__*/react.createElement(Photos_Photos, null))
   })))));
 };
 
