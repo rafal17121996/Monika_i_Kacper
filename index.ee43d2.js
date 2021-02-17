@@ -82146,27 +82146,27 @@ var Contact_style = (0,bem_css_modules/* default */.Z)(Contact_module);
 
 
 var Contact = () => {
-  return /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/react.createElement("div", {
     id: "contact",
     className: Contact_style("")
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/react.createElement("div", {
     className: Contact_style("wrapper")
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/react.createElement("div", {
     className: Contact_style("left")
-  }, "dsadas"), /*#__PURE__*/React.createElement("div", {
+  }, "dsadas"), /*#__PURE__*/react.createElement("div", {
     className: Contact_style("right")
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/react.createElement("div", {
     className: Contact_style("location")
-  }, /*#__PURE__*/React.createElement("img", {
+  }, /*#__PURE__*/react.createElement("img", {
     src: "https://img.icons8.com/ios-filled/50/000000/bride.png"
-  }), /*#__PURE__*/React.createElement("h2", null, "Panna M\u0142oda"), /*#__PURE__*/React.createElement("p", null, "Monika Czerwi\u0144ska ", /*#__PURE__*/React.createElement("br", null), "telefon: 743 432 423")), /*#__PURE__*/React.createElement("div", {
+  }), /*#__PURE__*/react.createElement("h2", null, "Panna M\u0142oda"), /*#__PURE__*/react.createElement("p", null, "Monika Czerwi\u0144ska ", /*#__PURE__*/react.createElement("br", null), "telefon: 743 432 423")), /*#__PURE__*/react.createElement("div", {
     className: Contact_style("location")
-  }, /*#__PURE__*/React.createElement("img", {
+  }, /*#__PURE__*/react.createElement("img", {
     src: "https://img.icons8.com/ios/50/000000/groom.png"
-  }), /*#__PURE__*/React.createElement("h2", null, "Pan M\u0142ody"), /*#__PURE__*/React.createElement("p", null, "Kacper \u0141yszczarz", /*#__PURE__*/React.createElement("br", null), "telefon: 743 432 423")))));
+  }), /*#__PURE__*/react.createElement("h2", null, "Pan M\u0142ody"), /*#__PURE__*/react.createElement("p", null, "Kacper \u0141yszczarz", /*#__PURE__*/react.createElement("br", null), "telefon: 743 432 423")))));
 };
 
-/* harmony default export */ const Contact_Contact = ((/* unused pure expression or super */ null && (Contact)));
+/* harmony default export */ const Contact_Contact = (Contact);
 ;// CONCATENATED MODULE: ./src/App.jsx
 
  // import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -82209,7 +82209,7 @@ var App = () => {
   }, /*#__PURE__*/react.createElement(Switch, null, /*#__PURE__*/react.createElement(Route, {
     path: "/",
     exact: true,
-    render: () => /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement(Navbar_Navbar, null), /*#__PURE__*/react.createElement(components_Home_Home, null), /*#__PURE__*/react.createElement(components_Map_Map, null), /*#__PURE__*/react.createElement(components_Music_Music, null), /*#__PURE__*/react.createElement(Gallery_Gallery, null))
+    render: () => /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement(Navbar_Navbar, null), /*#__PURE__*/react.createElement(components_Home_Home, null), /*#__PURE__*/react.createElement(components_Map_Map, null), /*#__PURE__*/react.createElement(components_Music_Music, null), /*#__PURE__*/react.createElement(Contact_Contact, null), /*#__PURE__*/react.createElement(Gallery_Gallery, null))
   })))));
 };
 
