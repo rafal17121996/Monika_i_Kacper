@@ -48359,7 +48359,6 @@ var Map_Map = () => {
       scrollTrigger: {
         trigger: image,
         start: "top 90%",
-        end: "bottom 60%",
         toggleActions: "restart complete reverse reset",
         markers: false
       }
@@ -82059,7 +82058,6 @@ var Music_Music = () => {
       scrollTrigger: {
         trigger: form,
         start: "top 90%",
-        end: "bottom 60%",
         toggleActions: "restart complete reverse reset",
         markers: false
       }
