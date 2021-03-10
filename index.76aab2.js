@@ -29618,7 +29618,7 @@ var Map = () => {
 // extracted by mini-css-extract-plugin
 /* harmony default export */ const Music_module = ({"Music":"Music","Music__title":"Music__title"});
 ;// CONCATENATED MODULE: ./src/assets/music.jpg
-/* harmony default export */ const music = (__webpack_require__.p + "c855d17622b17c495f20a0348e460e5c.jpg");
+/* harmony default export */ const music = (__webpack_require__.p + "dfe85202446955ab55df01d1fd15c2c5.jpg");
 ;// CONCATENATED MODULE: ./src/components/Music/Music.jsx
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -29875,17 +29875,17 @@ var History = () => {
 var Gift_style = (0,bem_css_modules/* default */.Z)(Gift_module);
 
 var Giftt = () => {
-  return /*#__PURE__*/react.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: Gift_style("")
-  }, /*#__PURE__*/react.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", {
     className: Gift_style("wrapper")
-  }, /*#__PURE__*/react.createElement("img", {
-    src: flowers,
+  }, /*#__PURE__*/React.createElement("img", {
+    src: img,
     alt: ""
-  }), /*#__PURE__*/react.createElement("h1", null, "Drodzy go\u015Bcie "), /*#__PURE__*/react.createElement("h2", null, "R\xF3wnie mocno jak kwiaty ucieszy nas wino")));
+  }), /*#__PURE__*/React.createElement("h1", null, "Drodzy go\u015Bcie "), /*#__PURE__*/React.createElement("h2", null, "R\xF3wnie mocno jak kwiaty ucieszy nas wino")));
 };
 
-/* harmony default export */ const Gift = (Giftt);
+/* harmony default export */ const Gift = ((/* unused pure expression or super */ null && (Giftt)));
 ;// CONCATENATED MODULE: ./src/App.jsx
 
  // import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -29931,7 +29931,7 @@ var App = () => {
   }, /*#__PURE__*/react.createElement(Switch, null, /*#__PURE__*/react.createElement(Route, {
     path: "/",
     exact: true,
-    render: () => /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement(Navbar_Navbar, null), /*#__PURE__*/react.createElement(components_Home_Home, null), /*#__PURE__*/react.createElement(Info_Info, null), /*#__PURE__*/react.createElement(Map_Map, null), /*#__PURE__*/react.createElement(Gift, null), /*#__PURE__*/react.createElement(History_History, null), /*#__PURE__*/react.createElement(Music_Music, null), /*#__PURE__*/react.createElement(Contact_Contact, null), /*#__PURE__*/react.createElement(Gallery_Gallery, null))
+    render: () => /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement(Navbar_Navbar, null), /*#__PURE__*/react.createElement(components_Home_Home, null), /*#__PURE__*/react.createElement(Info_Info, null), /*#__PURE__*/react.createElement(Map_Map, null), /*#__PURE__*/react.createElement(History_History, null), /*#__PURE__*/react.createElement(Music_Music, null), /*#__PURE__*/react.createElement(Contact_Contact, null), /*#__PURE__*/react.createElement(Gallery_Gallery, null))
   })))));
 };
 
