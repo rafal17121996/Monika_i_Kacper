@@ -29865,7 +29865,10 @@ var History = () => {
 ;// CONCATENATED MODULE: ./src/components/Gift/Gift.module.scss
 // extracted by mini-css-extract-plugin
 /* harmony default export */ const Gift_module = ({"Gift":"Gift","Gift__wrapper":"Gift__wrapper"});
+;// CONCATENATED MODULE: ./src/assets/flowers.png
+/* harmony default export */ const flowers = (__webpack_require__.p + "b15e6e380271db24a599b88988148850.png");
 ;// CONCATENATED MODULE: ./src/components/Gift/Gift.jsx
+
 
 
 
@@ -29876,10 +29879,10 @@ var Giftt = () => {
     className: Gift_style("")
   }, /*#__PURE__*/react.createElement("div", {
     className: Gift_style("wrapper")
-  }, /*#__PURE__*/react.createElement("h1", null, "Drodzy go\u015Bcie "), /*#__PURE__*/react.createElement("h2", null, "R\xF3wnie mocno jak kwiaty ucieszy nas wino"), /*#__PURE__*/react.createElement("figure", null, /*#__PURE__*/react.createElement("img", {
-    src: "",
+  }, /*#__PURE__*/react.createElement("img", {
+    src: flowers,
     alt: ""
-  }))));
+  }), /*#__PURE__*/react.createElement("h1", null, "Drodzy go\u015Bcie "), /*#__PURE__*/react.createElement("h2", null, "R\xF3wnie mocno jak kwiaty ucieszy nas wino")));
 };
 
 /* harmony default export */ const Gift = (Giftt);
