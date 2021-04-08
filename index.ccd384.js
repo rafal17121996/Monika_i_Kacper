@@ -31641,11 +31641,11 @@ var Popup = (_ref) => {
     className: Popup_style("btnWrapper")
   }, /*#__PURE__*/react.createElement("button", {
     onClick: () => handleStatus(3, item)
-  }, "Potwierd\u017A obecno\u015B\u0107"), /*#__PURE__*/react.createElement("button", {
+  }, "Bawimy si\u0119 z Wami do rana"), /*#__PURE__*/react.createElement("button", {
     onClick: () => handleStatus(2, item)
-  }, "Je\u017Celi nie wiesz jeszcze"), /*#__PURE__*/react.createElement("button", {
+  }, "Jeszcze nie wiemy"), /*#__PURE__*/react.createElement("button", {
     onClick: () => handleStatus(1, item)
-  }, "Zaznacz brak obecno\u015Bci")))), /*#__PURE__*/react.createElement("div", {
+  }, "Niestety nas nie b\u0119dzie")))), /*#__PURE__*/react.createElement("div", {
     onClick: () => onClose(),
     className: Popup_style("close")
   }, /*#__PURE__*/react.createElement("i", {
@@ -31703,7 +31703,7 @@ var Info = () => {
 /* harmony default export */ const history2 = (__webpack_require__.p + "e34daf2f7eb739596e33c52de26aab03.jpeg");
 ;// CONCATENATED MODULE: ./src/components/History/History.module.scss
 // extracted by mini-css-extract-plugin
-/* harmony default export */ const History_module = ({"History":"History","History__text2":"History__text2"});
+/* harmony default export */ const History_module = ({"History":"History","History__text2":"History__text2","History__text1":"History__text1"});
 ;// CONCATENATED MODULE: ./src/components/History/History.jsx
 
 
@@ -31717,7 +31717,9 @@ var History = () => {
       backgroundImage: "url(".concat(history2, ")")
     },
     className: History_style("")
-  }, /*#__PURE__*/react.createElement("p", null, "Ta historia zaczyna si\u0119 w\u0142a\u015Bciwie ju\u017C w podstaw\xF3wce, kiedy to rodzice Moniki postanowili pos\u0142a\u0107 j\u0105 rok wcze\u015Bniej do zer\xF3wki i trafi\u0142a ona do grupy w kt\xF3rej by\u0142 Kacper. Nie pami\u0119taj\u0105 siebie z tamtego czasu, szczeg\xF3lnie \u017Ce Monika wytrwa\u0142a a\u017C tydzie\u0144 po czym jednak rodzice postanowili, \u017Ce p\xF3jdzie jednak do szko\u0142y za rok ze swoim rocznikiem. Potem przysz\u0142o im spotka\u0107 si\u0119 w podstaw\xF3wce. Okaza\u0142o si\u0119, \u017Ce Kacper jednak kojarzy\u0142 Monik\u0119 i nie omieszka\u0142 wraz z kolegami podej\u015B\u0107 do niej w czasie przerwy i powiedzie\u0107, \u017Ce \"kiblowa\u0142a w zer\xF3wce\". Monika obstawia, \u017Ce ju\u017C wtedy si\u0119 w niej kocha\u0142. P\xF3\u017Aniej przysz\u0142o liceum, Kacper wyjecha\u0142 do Bydgoszczy i kt\xF3rego\u015B majowego weekendu postanowili p\xF3j\u015B\u0107 na wsp\xF3lny spacer. Spotykali si\u0119 coraz cz\u0119\u015Bciej, a\u017C w ko\u0144cu poca\u0142owali si\u0119 po raz pierwszy."), /*#__PURE__*/react.createElement("p", {
+  }, /*#__PURE__*/react.createElement("p", {
+    className: History_style("text1")
+  }, "Ta historia zaczyna si\u0119 w\u0142a\u015Bciwie ju\u017C w podstaw\xF3wce, kiedy to rodzice Moniki postanowili pos\u0142a\u0107 j\u0105 rok wcze\u015Bniej do zer\xF3wki i trafi\u0142a ona do grupy w kt\xF3rej by\u0142 Kacper. Nie pami\u0119taj\u0105 siebie z tamtego czasu, szczeg\xF3lnie \u017Ce Monika wytrwa\u0142a a\u017C tydzie\u0144 po czym jednak rodzice postanowili, \u017Ce p\xF3jdzie jednak do szko\u0142y za rok ze swoim rocznikiem. Potem przysz\u0142o im spotka\u0107 si\u0119 w podstaw\xF3wce. Okaza\u0142o si\u0119, \u017Ce Kacper jednak kojarzy\u0142 Monik\u0119 i nie omieszka\u0142 wraz z kolegami podej\u015B\u0107 do niej w czasie przerwy i powiedzie\u0107, \u017Ce \"kiblowa\u0142a w zer\xF3wce\". Monika obstawia, \u017Ce ju\u017C wtedy si\u0119 w niej kocha\u0142. P\xF3\u017Aniej przysz\u0142o liceum, Kacper wyjecha\u0142 do Bydgoszczy i kt\xF3rego\u015B majowego weekendu postanowili p\xF3j\u015B\u0107 na wsp\xF3lny spacer. Spotykali si\u0119 coraz cz\u0119\u015Bciej, a\u017C w ko\u0144cu poca\u0142owali si\u0119 po raz pierwszy."), /*#__PURE__*/react.createElement("p", {
     className: History_style("text2")
   }, "Skrajne! Monika by\u0142a przera\u017Cona, Kacper skaka\u0142 z rado\u015Bci. Spotkali si\u0119 trzy dni p\xF3\u017Aniej i Monika wyzna\u0142a Kacprowi mi\u0142o\u015B\u0107! Co za wtopa, 3 dni po pierwszym poca\u0142unku, wyznanie \"Kocham Ci\u0119\"! Jak si\u0119 okaza\u0142o p\xF3\u017Aniej ten impuls nie by\u0142 przypadkowy. Czas mija\u0142,a mi\u0142o\u015B\u0107 rozkwita\u0142a. Przetrwali razem wiele trudnych chwil i prze\u017Cyli razem wiele pi\u0119knych chwil, wej\u015Bcie w doros\u0142o\u015B\u0107, wiele podr\xF3\u017Cy, pierwszy rajd po pustyni, pierwszy trip samochodowy z przyjaci\xF3\u0142mi, zako\u0144czenie liceum, studia, przeprowadzki, pierwszy wsp\xF3lny pies i potem kot i kolejny kot i jeszcze jeden... ;) oraz wsp\xF3lny dom za miastem, pierwsze \u201Etak\u201D z ust Moniki gdy we W\u0142oszech Kacper postanowi\u0142 si\u0119 jej o\u015Bwiadczy\u0107. A ju\u017C za chwil\u0119 prze\u017Cyj\u0105 pierwszy dzie\u0144 jako ma\u0142\u017Ce\u0144stwo, a nast\u0119pnie b\u0119d\u0105 celebrowa\u0107 swoj\u0105 mi\u0142o\u015B\u0107 z najbli\u017Cszymi. Ju\u017C nie mog\u0105 si\u0119 doczeka\u0107 tego dnia i Was!"));
 };
