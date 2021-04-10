@@ -20405,6 +20405,241 @@ if (true) {
 
 /***/ }),
 
+/***/ 4599:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+var __webpack_unused_export__;
+
+
+__webpack_unused_export__ = ({
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(7294));
+
+var _propTypes = _interopRequireDefault(__webpack_require__(5697));
+
+var _trimText3 = _interopRequireDefault(__webpack_require__(2093));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var ReadMoreReact =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(ReadMoreReact, _React$Component);
+
+  function ReadMoreReact(props) {
+    var _this;
+
+    _classCallCheck(this, ReadMoreReact);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(ReadMoreReact).call(this, props));
+    var args = [_this.props.text, _this.props.min, _this.props.ideal, _this.props.max];
+
+    var _trimText = _trimText3["default"].apply(void 0, args),
+        _trimText2 = _slicedToArray(_trimText, 2),
+        primaryText = _trimText2[0],
+        secondaryText = _trimText2[1];
+
+    _this.state = {
+      displaySecondary: false,
+      primaryText: primaryText,
+      secondaryText: secondaryText,
+      readMoreText: _this.props.readMoreText
+    };
+    return _this;
+  }
+
+  _createClass(ReadMoreReact, [{
+    key: "setStatus",
+    value: function setStatus() {
+      var display = !this.state.displaySecondary;
+      this.setState({
+        displaySecondary: display
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var displayText;
+
+      if (!this.state.secondaryText) {
+        displayText = _react["default"].createElement("div", {
+          className: "display-text-group"
+        }, _react["default"].createElement("span", {
+          className: "displayed-text"
+        }, "".concat(this.state.primaryText, " ").concat(this.state.secondaryText)));
+      } else if (this.state.displaySecondary) {
+        displayText = _react["default"].createElement("div", {
+          className: "display-text-group"
+        }, _react["default"].createElement("span", {
+          className: "displayed-text",
+          onClick: this.setStatus.bind(this)
+        }, "".concat(this.state.primaryText, " ").concat(this.state.secondaryText)));
+      } else {
+        displayText = _react["default"].createElement("div", {
+          className: "display-text-group"
+        }, _react["default"].createElement("span", {
+          className: "displayed-text"
+        }, this.state.primaryText, _react["default"].createElement("span", {
+          style: {
+            display: "none"
+          }
+        }, this.state.secondaryText), _react["default"].createElement("div", {
+          className: "read-more-button",
+          onClick: this.setStatus.bind(this)
+        }, this.state.readMoreText)));
+      }
+
+      return displayText;
+    }
+  }]);
+
+  return ReadMoreReact;
+}(_react["default"].Component);
+
+exports.default = ReadMoreReact;
+ReadMoreReact.propTypes = {
+  text: _propTypes["default"].string.isRequired,
+  min: _propTypes["default"].number,
+  ideal: _propTypes["default"].number,
+  max: _propTypes["default"].number,
+  readMoreText: _propTypes["default"].string
+};
+ReadMoreReact.defaultProps = {
+  readMoreText: "read more"
+};
+
+/***/ }),
+
+/***/ 5563:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+module.exports = __webpack_require__(4599);
+
+/***/ }),
+
+/***/ 2093:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.default = void 0;
+var PUNCTUATION_LIST = [".", ",", "!", "?", "'", "{", "}", "(", ")", "[", "]", "/"];
+
+var trimText = function trimText(text) {
+  var min = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 80;
+  var ideal = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 100;
+  var max = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 200;
+
+  //This main function uses two pointers to move out from the ideal, to find the first instance of a punctuation mark followed by a space. If one cannot be found, it will go with the first space closest to the ideal.
+  if (max < min || ideal > max || ideal < min) {
+    throw new Error("The minimum length must be less than the maximum, and the ideal must be between the minimum and maximum.");
+  }
+
+  if (text.length < ideal) {
+    return [text, ''];
+  }
+
+  var pointerOne = ideal;
+  var pointerTwo = ideal;
+  var firstSpace, resultIdx;
+
+  var setSpace = function setSpace(idx) {
+    if (spaceMatch(text[idx])) {
+      firstSpace = firstSpace || idx;
+    }
+  };
+
+  while (pointerOne < max || pointerTwo > min) {
+    if (checkMatch(pointerOne, text, max, min)) {
+      resultIdx = pointerOne + 1;
+      break;
+    } else if (checkMatch(pointerTwo, text, max, min)) {
+      resultIdx = pointerTwo + 1;
+      break;
+    } else {
+      setSpace(pointerOne);
+      setSpace(pointerTwo);
+    }
+
+    pointerOne++;
+    pointerTwo--;
+  }
+
+  if (resultIdx === undefined) {
+    if (firstSpace && firstSpace >= min && firstSpace <= max) {
+      resultIdx = firstSpace;
+    } else if (ideal - min < max - ideal) {
+      resultIdx = min;
+    } else {
+      resultIdx = max;
+    }
+  }
+
+  return [text.slice(0, resultIdx), text.slice(resultIdx).trim()];
+};
+
+var spaceMatch = function spaceMatch(character) {
+  if (character === " ") {
+    return true;
+  }
+};
+
+var punctuationMatch = function punctuationMatch(idx, text) {
+  var punctuationIdx = PUNCTUATION_LIST.indexOf(text[idx]);
+
+  if (punctuationIdx >= 0 && spaceMatch(text[idx + 1])) {
+    return true;
+  }
+};
+
+var checkMatch = function checkMatch(idx, text, max, min) {
+  if (idx < max && idx > min && punctuationMatch(idx, text)) {
+    return true;
+  }
+};
+
+var _default = trimText;
+exports.default = _default;
+
+/***/ }),
+
 /***/ 8093:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -29441,7 +29676,11 @@ TweenMaxWithCSS = gsapWithCSS.core.Tween;
 var Home_style = (0,bem_css_modules/* default */.Z)(Home_module);
 
 
+
 var Home_Home = () => {
+  var {
+    isMobile
+  } = (0,react.useContext)(StoreContext);
   var [timerDays, setTimerDays] = (0,react.useState)('00');
   var [timerHours, setTimerHours] = (0,react.useState)('00');
   var [timerMinutes, setTimerMinutes] = (0,react.useState)('00');
@@ -29518,7 +29757,9 @@ var Home_Home = () => {
       autoAlpha: 1
     });
   }, []);
-  var mystyle = {
+  var mystyle = isMobile ? {
+    backgroundImage: "url(".concat(Home, ")")
+  } : {
     backgroundImage: "url(".concat(Home, ")"),
     backgroundPositionY: offset * 0.7 + "px"
   };
@@ -31301,7 +31542,7 @@ var Map = () => {
         trigger: image,
         start: "top 90%",
         toggleActions: "play complete none none",
-        markers: true
+        markers: false
       }
     });
     gsapWithCSS.fromTo(map, {
@@ -31701,10 +31942,14 @@ var Info = () => {
 /* harmony default export */ const Info_Info = (Info);
 ;// CONCATENATED MODULE: ./src/assets/history2.jpeg
 /* harmony default export */ const history2 = (__webpack_require__.p + "e34daf2f7eb739596e33c52de26aab03.jpeg");
+// EXTERNAL MODULE: ./node_modules/read-more-react/dist/index.js
+var dist = __webpack_require__(5563);
 ;// CONCATENATED MODULE: ./src/components/History/History.module.scss
 // extracted by mini-css-extract-plugin
-/* harmony default export */ const History_module = ({"History":"History","History__text2":"History__text2","History__text1":"History__text1"});
+/* harmony default export */ const History_module = ({"History":"History","History__text3":"History__text3","displayed-text":"displayed-text","read-more-button":"read-more-button"});
 ;// CONCATENATED MODULE: ./src/components/History/History.jsx
+
+
 
 
 
@@ -31712,16 +31957,25 @@ var Info = () => {
 var History_style = (0,bem_css_modules/* default */.Z)(History_module);
 
 var History = () => {
-  return /*#__PURE__*/react.createElement("div", {
+  var {
+    isMobile
+  } = (0,react.useContext)(StoreContext);
+  return /*#__PURE__*/react.createElement("div", null, /*#__PURE__*/react.createElement("div", {
     style: {
       backgroundImage: "url(".concat(history2, ")")
     },
     className: History_style("")
-  }, /*#__PURE__*/react.createElement("p", {
+  }, isMobile ? null : /*#__PURE__*/react.createElement("p", {
     className: History_style("text1")
-  }, "Ta historia zaczyna si\u0119 w\u0142a\u015Bciwie ju\u017C w podstaw\xF3wce, kiedy to rodzice Moniki postanowili pos\u0142a\u0107 j\u0105 rok wcze\u015Bniej do zer\xF3wki i trafi\u0142a ona do grupy w kt\xF3rej by\u0142 Kacper. Nie pami\u0119taj\u0105 siebie z tamtego czasu, szczeg\xF3lnie \u017Ce Monika wytrwa\u0142a a\u017C tydzie\u0144 po czym jednak rodzice postanowili, \u017Ce p\xF3jdzie jednak do szko\u0142y za rok ze swoim rocznikiem. Potem przysz\u0142o im spotka\u0107 si\u0119 w podstaw\xF3wce. Okaza\u0142o si\u0119, \u017Ce Kacper jednak kojarzy\u0142 Monik\u0119 i nie omieszka\u0142 wraz z kolegami podej\u015B\u0107 do niej w czasie przerwy i powiedzie\u0107, \u017Ce \"kiblowa\u0142a w zer\xF3wce\". Monika obstawia, \u017Ce ju\u017C wtedy si\u0119 w niej kocha\u0142. P\xF3\u017Aniej przysz\u0142o liceum, Kacper wyjecha\u0142 do Bydgoszczy i kt\xF3rego\u015B majowego weekendu postanowili p\xF3j\u015B\u0107 na wsp\xF3lny spacer. Spotykali si\u0119 coraz cz\u0119\u015Bciej, a\u017C w ko\u0144cu poca\u0142owali si\u0119 po raz pierwszy."), /*#__PURE__*/react.createElement("p", {
-    className: History_style("text2")
-  }, "Skrajne! Monika by\u0142a przera\u017Cona, Kacper skaka\u0142 z rado\u015Bci. Spotkali si\u0119 trzy dni p\xF3\u017Aniej i Monika wyzna\u0142a Kacprowi mi\u0142o\u015B\u0107! Co za wtopa, 3 dni po pierwszym poca\u0142unku, wyznanie \"Kocham Ci\u0119\"! Jak si\u0119 okaza\u0142o p\xF3\u017Aniej ten impuls nie by\u0142 przypadkowy. Czas mija\u0142,a mi\u0142o\u015B\u0107 rozkwita\u0142a. Przetrwali razem wiele trudnych chwil i prze\u017Cyli razem wiele pi\u0119knych chwil, wej\u015Bcie w doros\u0142o\u015B\u0107, wiele podr\xF3\u017Cy, pierwszy rajd po pustyni, pierwszy trip samochodowy z przyjaci\xF3\u0142mi, zako\u0144czenie liceum, studia, przeprowadzki, pierwszy wsp\xF3lny pies i potem kot i kolejny kot i jeszcze jeden... ;) oraz wsp\xF3lny dom za miastem, pierwsze \u201Etak\u201D z ust Moniki gdy we W\u0142oszech Kacper postanowi\u0142 si\u0119 jej o\u015Bwiadczy\u0107. A ju\u017C za chwil\u0119 prze\u017Cyj\u0105 pierwszy dzie\u0144 jako ma\u0142\u017Ce\u0144stwo, a nast\u0119pnie b\u0119d\u0105 celebrowa\u0107 swoj\u0105 mi\u0142o\u015B\u0107 z najbli\u017Cszymi. Ju\u017C nie mog\u0105 si\u0119 doczeka\u0107 tego dnia i Was!"));
+  }, "Ta historia zaczyna si\u0119 w\u0142a\u015Bciwie ju\u017C w podstaw\xF3wce, kiedy to rodzice Moniki postanowili pos\u0142a\u0107 j\u0105 rok wcze\u015Bniej do zer\xF3wki i trafi\u0142a ona do grupy w kt\xF3rej by\u0142 Kacper. Nie pami\u0119taj\u0105 siebie z tamtego czasu, szczeg\xF3lnie \u017Ce Monika wytrwa\u0142a a\u017C tydzie\u0144 po czym jednak rodzice postanowili, \u017Ce p\xF3jdzie jednak do szko\u0142y za rok ze swoim rocznikiem. Potem przysz\u0142o im spotka\u0107 si\u0119 w podstaw\xF3wce. Okaza\u0142o si\u0119, \u017Ce Kacper jednak kojarzy\u0142 Monik\u0119 i nie omieszka\u0142 wraz z kolegami podej\u015B\u0107 do niej w czasie przerwy i powiedzie\u0107, \u017Ce \"kiblowa\u0142a w zer\xF3wce\". Monika obstawia, \u017Ce ju\u017C wtedy si\u0119 w niej kocha\u0142. P\xF3\u017Aniej przysz\u0142o liceum, Kacper wyjecha\u0142 do Bydgoszczy i kt\xF3rego\u015B majowego weekendu postanowili p\xF3j\u015B\u0107 na wsp\xF3lny spacer. Spotykali si\u0119 coraz cz\u0119\u015Bciej, a\u017C w ko\u0144cu poca\u0142owali si\u0119 po raz pierwszy. ", /*#__PURE__*/react.createElement("br", null), /*#__PURE__*/react.createElement("br", null), "Skrajne! Monika by\u0142a przera\u017Cona, Kacper skaka\u0142 z rado\u015Bci. Spotkalisi\u0119 trzy dni p\xF3\u017Aniej i Monika wyzna\u0142a Kacprowi mi\u0142o\u015B\u0107! Co za wtopa, 3 dni po pierwszym poca\u0142unku, wyznanie \"Kocham Ci\u0119\"! Jak si\u0119 okaza\u0142o p\xF3\u017Aniej ten impuls nie by\u0142 przypadkowy. Czas mija\u0142,a mi\u0142o\u015B\u0107 rozkwita\u0142a. Przetrwali razem wiele trudnych chwil i prze\u017Cyli razem wiele pi\u0119knych chwil, wej\u015Bcie w doros\u0142o\u015B\u0107, wiele podr\xF3\u017Cy, pierwszy rajd po pustyni, pierwszy trip samochodowy z przyjaci\xF3\u0142mi, zako\u0144czenie liceum, studia, przeprowadzki, pierwszy wsp\xF3lny pies i potem kot i kolejny kot i jeszcze jeden... ;) oraz wsp\xF3lny dom za miastem, pierwsze \u201Etak\u201D z ust Moniki gdy we W\u0142oszech Kacper postanowi\u0142 si\u0119 jej o\u015Bwiadczy\u0107. A ju\u017C za chwil\u0119 prze\u017Cyj\u0105 pierwszy dzie\u0144 jako ma\u0142\u017Ce\u0144stwo, a nast\u0119pnie b\u0119d\u0105 celebrowa\u0107 swoj\u0105 mi\u0142o\u015B\u0107 z najbli\u017Cszymi. Ju\u017C nie mog\u0105 si\u0119 doczeka\u0107 tego dnia i Was!")), isMobile ? /*#__PURE__*/react.createElement("div", {
+    className: History_style("text3")
+  }, /*#__PURE__*/react.createElement(dist.default, {
+    text: 'Ta historia zaczyna się właściwie już w podstawówce, kiedy to rodzice Moniki postanowili posłać ją rok wcześniej do zerówki i trafiła ona do grupy w której był Kacper. Nie pamiętają siebie z tamtego czasu, szczególnie że Monika wytrwała aż tydzień po czym jednak rodzice postanowili, że pójdzie jednak do szkoły za rok ze swoim rocznikiem. Potem przyszło im spotkać się w podstawówce. Okazało się, że Kacper jednak kojarzył Monikę i nie omieszkał wraz z kolegami podejść do niej w czasie przerwy i powiedzieć, że "kiblowała w zerówce". Monika obstawia, że już wtedy się w niej kochał. Później przyszło liceum, Kacper wyjechał do Bydgoszczy i któregoś majowego weekendu postanowili pójść na wspólny spacer. Spotykali się coraz częściej, aż w końcu pocałowali się po raz pierwszy. Skrajne! Monika była przerażona, Kacper skakał z radości. Spotkalisię trzy dni później i Monika wyznała Kacprowi miłość! Co za wtopa, 3 dni po pierwszym pocałunku, wyznanie "Kocham Cię"! Jak się okazało później ten impuls nie był przypadkowy. Czas mijał,a miłość rozkwitała. Przetrwali razem wiele trudnych chwil i przeżyli razem wiele pięknych chwil, wejście w dorosłość, wiele podróży, pierwszy rajd po pustyni, pierwszy trip samochodowy z przyjaciółmi, zakończenie liceum, studia, przeprowadzki, pierwszy wspólny pies i potem kot i kolejny kot i jeszcze jeden... ;) oraz wspólny dom za miastem, pierwsze „tak” z ust Moniki gdy we Włoszech Kacper postanowił się jej oświadczyć. A już za chwilę przeżyją pierwszy dzień jako małżeństwo, a następnie będą celebrować swoją miłość z najbliższymi. Już nie mogą się doczekać tego dnia i Was!',
+    readMoreText: 'Zobacz więcej',
+    min: 150,
+    ideal: 300,
+    max: 500
+  })) : null);
 };
 
 /* harmony default export */ const History_History = (History);
@@ -31751,8 +32005,8 @@ var Giftt = () => {
 /* harmony default export */ const Gift = ((/* unused pure expression or super */ null && (Giftt)));
 ;// CONCATENATED MODULE: ./src/App.jsx
 
- // import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+ // import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
 
 
@@ -31785,7 +32039,7 @@ var App = () => {
     className: "overlay"
   }, /*#__PURE__*/react.createElement("i", {
     className: "fas fa-sync-alt"
-  }), " ", /*#__PURE__*/react.createElement("p", null, "Obr\xF3\u0107 swoje urz\u0105dzenie")) : /*#__PURE__*/react.createElement(HashRouter, null, /*#__PURE__*/react.createElement(store_StoreProvider, null, /*#__PURE__*/react.createElement(react.Suspense, {
+  }), " ", /*#__PURE__*/react.createElement("p", null, "Obr\xF3\u0107 swoje urz\u0105dzenie")) : /*#__PURE__*/react.createElement(BrowserRouter, null, /*#__PURE__*/react.createElement(store_StoreProvider, null, /*#__PURE__*/react.createElement(react.Suspense, {
     fallback: /*#__PURE__*/react.createElement("div", {
       style: {
         height: "100vh"
