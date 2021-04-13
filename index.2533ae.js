@@ -29780,7 +29780,7 @@ var Home_Home = () => {
     id: "title"
   }, "\u015Alub Moniki i Kacpra"), /*#__PURE__*/react.createElement("p", {
     id: "title2"
-  }, "Odlicznie do najwa\u017Cniejszego dnia w naszym \u017Cyciu!")), /*#__PURE__*/react.createElement("div", {
+  }, "Odliczanie do najwa\u017Cniejszego dnia w naszym \u017Cyciu!")), /*#__PURE__*/react.createElement("div", {
     ref: el => {
       time = el;
     },
