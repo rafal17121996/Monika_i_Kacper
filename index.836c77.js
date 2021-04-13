@@ -29780,7 +29780,7 @@ var Home_Home = () => {
     id: "title"
   }, "\u015Alub Moniki i Kacpra"), /*#__PURE__*/react.createElement("p", {
     id: "title2"
-  }, "Odlicznie do najwaszniejszego dnia w naszym \u017Cyciu!")), /*#__PURE__*/react.createElement("div", {
+  }, "Odlicznie do najwa\u017Cniejszego dnia w naszym \u017Cyciu!")), /*#__PURE__*/react.createElement("div", {
     ref: el => {
       time = el;
     },
@@ -31581,9 +31581,9 @@ var Map = () => {
     className: Map_style("right")
   }, /*#__PURE__*/react.createElement("div", {
     className: Map_style("location")
-  }, /*#__PURE__*/react.createElement("h2", null, "\u015Alub odb\u0119dzie si\u0119"), /*#__PURE__*/react.createElement("p", null, "\u015Alub odb\u0119dzie si\u0119 ", /*#__PURE__*/react.createElement("br", null), "03.07.2021 o godz. 16:00 ", /*#__PURE__*/react.createElement("br", null), "W Ko\u015Bciele pw. Naj\u015Bwi\u0119tszego Serca ", /*#__PURE__*/react.createElement("br", null), "Pana Jezusaw Kiszkowie")), /*#__PURE__*/react.createElement("div", {
+  }, /*#__PURE__*/react.createElement("h2", null, "\u015Alub odb\u0119dzie si\u0119"), /*#__PURE__*/react.createElement("p", null, "03.07.2021 o godz. 16:00 ", /*#__PURE__*/react.createElement("br", null), "W Ko\u015Bciele pw. Naj\u015Bwi\u0119tszego Serca ", /*#__PURE__*/react.createElement("br", null), "Pana Jezusaw Kiszkowie")), /*#__PURE__*/react.createElement("div", {
     className: Map_style("location")
-  }, /*#__PURE__*/react.createElement("h2", null, "Po ceremonii ko\u015Bcielnej"), /*#__PURE__*/react.createElement("p", null, "zapraszamy na przyj\u0119cie weselne, ", /*#__PURE__*/react.createElement("br", null), " kt\xF3re odb\u0119dzie si\u0119 w Restauracji ", /*#__PURE__*/react.createElement("br", null), " Stary Kamionek w Kamionku")), /*#__PURE__*/react.createElement("div", {
+  }, /*#__PURE__*/react.createElement("h2", null, "Po ceremonii ko\u015Bcielnej"), /*#__PURE__*/react.createElement("p", null, "Zapraszamy na przyj\u0119cie weselne, ", /*#__PURE__*/react.createElement("br", null), " kt\xF3re odb\u0119dzie si\u0119 w Restauracji ", /*#__PURE__*/react.createElement("br", null), " Stary Kamionek w Kamionku")), /*#__PURE__*/react.createElement("div", {
     className: Map_style("map")
   }, /*#__PURE__*/react.createElement(WrappedMap, {
     googleMapURL: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyBtH3x10QgQaasPBEz8oXcxM-CBL-Iog-0",
@@ -31890,14 +31890,13 @@ var Popup = (_ref) => {
     onClick: () => onClose(),
     className: Popup_style("close")
   }, /*#__PURE__*/react.createElement("i", {
+    onClick: () => onClose(),
     className: "fas fa-times"
   })))), document.getElementById("portal"));
 };
 
 /* harmony default export */ const Popup_Popup = (Popup);
 ;// CONCATENATED MODULE: ./src/components/Info/Info.jsx
-
-
 
 
 
