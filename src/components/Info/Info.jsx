@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
 import bemCssModules from "bem-css-modules";
-
 import { default as InfoStyles } from "./Info.module.scss";
 import img from "../../assets/info.jpeg";
 import bg from "../../assets/bg.jpg";
 import Popup from "../Popup/Popup";
-import { useHistory} from "react-router";
-import axios from "axios";
 
 
 

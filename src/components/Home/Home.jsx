@@ -91,7 +91,7 @@ const Home = () => {
         <div className={style("wrapper")}>
             <div ref={el =>{wrapper=el}}  className={style("title")}>
           <h2 id='title'>Ślub Moniki i Kacpra</h2>
-          <p id='title2'>Odlicznie do najwaszniejszego dnia w naszym życiu!</p>
+          <p id='title2'>Odliczanie do najważniejszego dnia w naszym życiu!</p>
         </div>
         <div  ref={el =>{time=el}}  className={style("countdown")}>
           <section>

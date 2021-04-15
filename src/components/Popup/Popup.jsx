@@ -114,7 +114,7 @@ const Popup = ({ open, onClose }) => {
         ))}
 
         <div onClick={() => onClose()} className={style("close")}>
-          <i className="fas fa-times"></i>
+          <i onClick={() => onClose()}  className="fas fa-times"></i>
         </div>
       </div>
     </div>,

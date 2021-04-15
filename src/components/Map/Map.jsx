@@ -137,7 +137,6 @@ const Map = () => {
           <div className={style("location")}>
             <h2>Ślub odbędzie się</h2>
             <p>
-              Ślub odbędzie się <br />
               03.07.2021 o godz. 16:00 <br />
               W Kościele pw. Najświętszego Serca <br/>
               Pana Jezusaw Kiszkowie
@@ -146,7 +145,7 @@ const Map = () => {
           <div className={style("location")}>
             <h2>Po ceremonii kościelnej</h2>
             <p>
-            zapraszamy na przyjęcie weselne, <br/> które odbędzie się w Restauracji <br/> Stary Kamionek w Kamionku
+            Zapraszamy na przyjęcie weselne, <br/> które odbędzie się w Restauracji <br/> Stary Kamionek w Kamionku
             </p>
           </div>
 
