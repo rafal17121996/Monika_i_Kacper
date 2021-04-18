@@ -31611,6 +31611,9 @@ var Map = () => {
 /* harmony default export */ const Music_module = ({"Music":"Music","Music__title":"Music__title"});
 ;// CONCATENATED MODULE: ./src/assets/music.jpg
 /* harmony default export */ const music = (__webpack_require__.p + "dfe85202446955ab55df01d1fd15c2c5.jpg");
+// EXTERNAL MODULE: ./node_modules/axios/index.js
+var axios = __webpack_require__(9669);
+var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
 ;// CONCATENATED MODULE: ./src/components/Music/Music.jsx
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -31627,6 +31630,7 @@ var Music_style = (0,bem_css_modules/* default */.Z)(Music_module);
 gsapWithCSS.registerPlugin(ScrollTrigger);
 
 
+
 var Music = () => {
   var [state, setState] = (0,react.useState)({
     name: "",
@@ -31641,7 +31645,22 @@ var Music = () => {
   window.addEventListener("scroll", handleScroll);
 
   var handleOnSubmit = e => {
+    var config = {
+      headers: {
+        ApiKij: "12nfhfkjaha983ZKsakjh12989S11"
+      }
+    };
+    var data = {
+      weddingName: "ŚlubMoniki_i_kacpra",
+      title: state.name,
+      author: state.artist
+    };
     e.preventDefault();
+    axios_default().post("https://weddingonline-test.azurewebsites.net/api/wedding/addsong", data, config).then(response => {
+      console.log(response);
+    }).catch(error => {
+      console.log(error);
+    });
     setState({
       name: "",
       artist: ""
@@ -31795,9 +31814,6 @@ var Contact = () => {
 ;// CONCATENATED MODULE: ./src/components/Popup/Popup.module.scss
 // extracted by mini-css-extract-plugin
 /* harmony default export */ const Popup_module = ({"Popup__popup_background":"Popup__popup_background","Popup__popup":"Popup__popup","Popup__close":"Popup__close","Popup__btnWrapper":"Popup__btnWrapper","Popup__guest":"Popup__guest","Popup":"Popup"});
-// EXTERNAL MODULE: ./node_modules/axios/index.js
-var axios = __webpack_require__(9669);
-var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
 ;// CONCATENATED MODULE: ./src/components/Popup/Popup.jsx
 
 
