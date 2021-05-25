@@ -22119,6 +22119,10 @@ var __webpack_exports__ = {};
 (() => {
 "use strict";
 
+// NAMESPACE OBJECT: ./src/components/Admin/Admin.module.scss
+var Admin_module_namespaceObject = {};
+__webpack_require__.r(Admin_module_namespaceObject);
+
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(7294);
 // EXTERNAL MODULE: ./node_modules/react-dom/index.js
@@ -32018,9 +32022,44 @@ var Giftt = () => {
 };
 
 /* harmony default export */ const Gift = ((/* unused pure expression or super */ null && (Giftt)));
+;// CONCATENATED MODULE: ./src/components/Admin/Admin.module.scss
+// extracted by mini-css-extract-plugin
+
+;// CONCATENATED MODULE: ./src/components/Admin/Admin.jsx
+
+
+
+
+var Admin_style = (0,bem_css_modules/* default */.Z)(Admin_module_namespaceObject.default);
+
+var Admin = () => {
+  var [state, setstate] = (0,react.useState)([]);
+  (0,react.useEffect)(() => {
+    updateList();
+  }, []);
+
+  var updateList = () => {
+    var config = {
+      headers: {
+        ApiKij: "12nfhfkjaha983ZKsakjh12989S11"
+      }
+    };
+    axios_default().get("https://weddingonline-test.azurewebsites.net/api/wedding/\u015AlubMoniki_i_kacpra", config).then(response => {
+      console.log(response);
+      setstate(response.data.guests);
+    }).catch(error => {
+      console.log('error');
+    });
+  };
+
+  return /*#__PURE__*/react.createElement("div", null, /*#__PURE__*/react.createElement("table", null, state.map(iteam => /*#__PURE__*/react.createElement("tr", null, /*#__PURE__*/react.createElement("td", null, iteam.firstName), " ", /*#__PURE__*/react.createElement("td", null, iteam.lastName), " ", /*#__PURE__*/react.createElement("td", null, iteam.decisionStatus == 3 ? "Potwierdzony" : null, " ", iteam.decisionStatus == 2 ? "Może" : null, " ", iteam.decisionStatus == 1 ? "Nie będe" : null, " ", iteam.decisionStatus == 0 ? "Nie zaznaczył" : null)))));
+};
+
+/* harmony default export */ const Admin_Admin = (Admin);
 ;// CONCATENATED MODULE: ./src/App.jsx
 
  //import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 
 
 
@@ -32049,7 +32088,7 @@ var App = () => {
   (0,react.useEffect)(() => {
     handleIsMoblie();
   }, []);
-  window.addEventListener('resize', handleIsMoblie);
+  window.addEventListener("resize", handleIsMoblie);
   return isMobile ? /*#__PURE__*/react.createElement("div", {
     className: "overlay"
   }, /*#__PURE__*/react.createElement("i", {
@@ -32061,6 +32100,9 @@ var App = () => {
       }
     }, "Loading...")
   }, /*#__PURE__*/react.createElement(Switch, null, /*#__PURE__*/react.createElement(Route, {
+    exact: true,
+    path: "/admin"
+  }, /*#__PURE__*/react.createElement(Admin_Admin, null)), /*#__PURE__*/react.createElement(Route, {
     exact: true,
     path: "/:item",
     render: () => /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement(Navbar_Navbar, null), /*#__PURE__*/react.createElement(components_Home_Home, null), /*#__PURE__*/react.createElement(Info_Info, null), /*#__PURE__*/react.createElement(Map_Map, null), /*#__PURE__*/react.createElement(History_History, null), /*#__PURE__*/react.createElement(Music_Music, null), /*#__PURE__*/react.createElement(Contact_Contact, null), /*#__PURE__*/react.createElement(Gallery_Gallery, null))
