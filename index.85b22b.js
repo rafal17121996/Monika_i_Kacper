@@ -22119,6 +22119,10 @@ var __webpack_exports__ = {};
 (() => {
 "use strict";
 
+// NAMESPACE OBJECT: ./src/components/Admin/Admin.module.scss
+var Admin_module_namespaceObject = {};
+__webpack_require__.r(Admin_module_namespaceObject);
+
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(7294);
 // EXTERNAL MODULE: ./node_modules/react-dom/index.js
@@ -31994,30 +31998,40 @@ var History = () => {
 };
 
 /* harmony default export */ const History_History = (History);
-;// CONCATENATED MODULE: ./src/components/Gift/Gift.module.scss
+;// CONCATENATED MODULE: ./src/components/Admin/Admin.module.scss
 // extracted by mini-css-extract-plugin
-/* harmony default export */ const Gift_module = ({"Gift":"Gift","Gift__wrapper":"Gift__wrapper"});
-;// CONCATENATED MODULE: ./src/assets/flowers.png
-/* harmony default export */ const flowers = (__webpack_require__.p + "b15e6e380271db24a599b88988148850.png");
-;// CONCATENATED MODULE: ./src/components/Gift/Gift.jsx
+
+;// CONCATENATED MODULE: ./src/components/Admin/Admin.jsx
 
 
 
 
-var Gift_style = (0,bem_css_modules/* default */.Z)(Gift_module);
+var Admin_style = (0,bem_css_modules/* default */.Z)(Admin_module_namespaceObject.default);
 
-var Giftt = () => {
-  return /*#__PURE__*/React.createElement("div", {
-    className: Gift_style("")
-  }, /*#__PURE__*/React.createElement("div", {
-    className: Gift_style("wrapper")
-  }, /*#__PURE__*/React.createElement("img", {
-    src: img,
-    alt: ""
-  }), /*#__PURE__*/React.createElement("h1", null, "Drodzy go\u015Bcie "), /*#__PURE__*/React.createElement("h2", null, "R\xF3wnie mocno jak kwiaty ucieszy nas wino")));
+var Admin = () => {
+  var [state, setstate] = (0,react.useState)([]);
+  (0,react.useEffect)(() => {
+    updateList();
+  }, []);
+
+  var updateList = () => {
+    var config = {
+      headers: {
+        ApiKij: "12nfhfkjaha983ZKsakjh12989S11"
+      }
+    };
+    axios_default().get("https://weddingonline-test.azurewebsites.net/api/wedding/\u015AlubMoniki_i_kacpra", config).then(response => {
+      console.log(response);
+      setstate(response.data.guests);
+    }).catch(error => {
+      console.log('error');
+    });
+  };
+
+  return /*#__PURE__*/react.createElement("div", null, /*#__PURE__*/react.createElement("table", null, state.map(iteam => /*#__PURE__*/react.createElement("tr", null, /*#__PURE__*/react.createElement("td", null, iteam.firstName), " ", /*#__PURE__*/react.createElement("td", null, iteam.lastName), " ", /*#__PURE__*/react.createElement("td", null, iteam.decisionStatus == 3 ? "Potwierdzony" : null, " ", iteam.decisionStatus == 2 ? "Może" : null, " ", iteam.decisionStatus == 1 ? "Nie będe" : null, " ", iteam.decisionStatus == 0 ? "Nie zaznaczył" : null)))));
 };
 
-/* harmony default export */ const Gift = ((/* unused pure expression or super */ null && (Giftt)));
+/* harmony default export */ const Admin_Admin = (Admin);
 ;// CONCATENATED MODULE: ./src/App.jsx
 
  //import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -32054,20 +32068,17 @@ var App = () => {
     className: "overlay"
   }, /*#__PURE__*/react.createElement("i", {
     className: "fas fa-sync-alt"
-  }), " ", /*#__PURE__*/react.createElement("p", null, "Obr\xF3\u0107 swoje urz\u0105dzenie")) : /*#__PURE__*/react.createElement(HashRouter, null, /*#__PURE__*/react.createElement(store_StoreProvider, null, /*#__PURE__*/react.createElement(react.Suspense, {
-    fallback: /*#__PURE__*/react.createElement("div", {
-      style: {
-        height: "100vh"
-      }
-    }, "Loading...")
-  }, /*#__PURE__*/react.createElement(Switch, null, /*#__PURE__*/react.createElement(Route, {
+  }), " ", /*#__PURE__*/react.createElement("p", null, "Obr\xF3\u0107 swoje urz\u0105dzenie")) : /*#__PURE__*/react.createElement(HashRouter, null, /*#__PURE__*/react.createElement(store_StoreProvider, null, /*#__PURE__*/react.createElement(Route, {
+    path: "/admin",
+    component: Admin_Admin
+  }), /*#__PURE__*/react.createElement(Route, {
     exact: true,
     path: "/:item",
     render: () => /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement(Navbar_Navbar, null), /*#__PURE__*/react.createElement(components_Home_Home, null), /*#__PURE__*/react.createElement(Info_Info, null), /*#__PURE__*/react.createElement(Map_Map, null), /*#__PURE__*/react.createElement(History_History, null), /*#__PURE__*/react.createElement(Music_Music, null), /*#__PURE__*/react.createElement(Contact_Contact, null), /*#__PURE__*/react.createElement(Gallery_Gallery, null))
   }), /*#__PURE__*/react.createElement(Route, {
     path: "/",
     render: () => /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement(Navbar_Navbar, null), /*#__PURE__*/react.createElement(components_Home_Home, null), /*#__PURE__*/react.createElement(Info_Info, null), /*#__PURE__*/react.createElement(Map_Map, null), /*#__PURE__*/react.createElement(History_History, null), /*#__PURE__*/react.createElement(Music_Music, null), /*#__PURE__*/react.createElement(Contact_Contact, null), /*#__PURE__*/react.createElement(Gallery_Gallery, null))
-  })))));
+  })));
 };
 
 /* harmony default export */ const src_App = (App);
