@@ -31616,8 +31616,8 @@ var Map = () => {
 ;// CONCATENATED MODULE: ./src/assets/music.jpg
 /* harmony default export */ const music = (__webpack_require__.p + "dfe85202446955ab55df01d1fd15c2c5.jpg");
 // EXTERNAL MODULE: ./node_modules/axios/index.js
-var axios = __webpack_require__(9669);
-var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
+var node_modules_axios = __webpack_require__(9669);
+var axios_default = /*#__PURE__*/__webpack_require__.n(node_modules_axios);
 ;// CONCATENATED MODULE: ./src/components/Music/Music.jsx
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -32009,8 +32009,8 @@ var History = () => {
 var Admin_style = (0,bem_css_modules/* default */.Z)(Admin_module_namespaceObject.default);
 
 var Admin = () => {
-  var [state, setstate] = (0,react.useState)([]);
-  (0,react.useEffect)(() => {
+  var [state, setstate] = useState([]);
+  useEffect(() => {
     updateList();
   }, []);
 
@@ -32020,7 +32020,7 @@ var Admin = () => {
         ApiKij: "12nfhfkjaha983ZKsakjh12989S11"
       }
     };
-    axios_default().get("https://weddingonline-test.azurewebsites.net/api/wedding/\u015AlubMoniki_i_kacpra", config).then(response => {
+    axios.get("https://weddingonline-test.azurewebsites.net/api/wedding/\u015AlubMoniki_i_kacpra", config).then(response => {
       console.log(response);
       setstate(response.data.guests);
     }).catch(error => {
@@ -32028,10 +32028,10 @@ var Admin = () => {
     });
   };
 
-  return /*#__PURE__*/react.createElement("div", null, /*#__PURE__*/react.createElement("table", null, state.map(iteam => /*#__PURE__*/react.createElement("tr", null, /*#__PURE__*/react.createElement("td", null, iteam.firstName), " ", /*#__PURE__*/react.createElement("td", null, iteam.lastName), " ", /*#__PURE__*/react.createElement("td", null, iteam.decisionStatus == 3 ? "Potwierdzony" : null, " ", iteam.decisionStatus == 2 ? "Może" : null, " ", iteam.decisionStatus == 1 ? "Nie będe" : null, " ", iteam.decisionStatus == 0 ? "Nie zaznaczył" : null)))));
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("table", null, state.map(iteam => /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", null, iteam.firstName), " ", /*#__PURE__*/React.createElement("td", null, iteam.lastName), " ", /*#__PURE__*/React.createElement("td", null, iteam.decisionStatus == 3 ? "Potwierdzony" : null, " ", iteam.decisionStatus == 2 ? "Może" : null, " ", iteam.decisionStatus == 1 ? "Nie będe" : null, " ", iteam.decisionStatus == 0 ? "Nie zaznaczył" : null)))));
 };
 
-/* harmony default export */ const Admin_Admin = (Admin);
+/* harmony default export */ const Admin_Admin = ((/* unused pure expression or super */ null && (Admin)));
 ;// CONCATENATED MODULE: ./src/App.jsx
 
  //import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -32069,9 +32069,6 @@ var App = () => {
   }, /*#__PURE__*/react.createElement("i", {
     className: "fas fa-sync-alt"
   }), " ", /*#__PURE__*/react.createElement("p", null, "Obr\xF3\u0107 swoje urz\u0105dzenie")) : /*#__PURE__*/react.createElement(HashRouter, null, /*#__PURE__*/react.createElement(store_StoreProvider, null, /*#__PURE__*/react.createElement(Route, {
-    path: "/admin",
-    component: Admin_Admin
-  }), /*#__PURE__*/react.createElement(Route, {
     exact: true,
     path: "/:item",
     render: () => /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement(Navbar_Navbar, null), /*#__PURE__*/react.createElement(components_Home_Home, null), /*#__PURE__*/react.createElement(Info_Info, null), /*#__PURE__*/react.createElement(Map_Map, null), /*#__PURE__*/react.createElement(History_History, null), /*#__PURE__*/react.createElement(Music_Music, null), /*#__PURE__*/react.createElement(Contact_Contact, null), /*#__PURE__*/react.createElement(Gallery_Gallery, null))
