@@ -31894,7 +31894,7 @@ var Popup = (_ref) => {
   }, guests.map(item => /*#__PURE__*/react.createElement("div", {
     className: Popup_style("guest"),
     key: item.firstName
-  }, /*#__PURE__*/react.createElement("h1", null, item.firstName, " ", item.lastName), /*#__PURE__*/react.createElement("p", null, "Status:", " ", item.decisionStatus == 0 ? "Nieokreślony" : null, item.decisionStatus == 1 ? "Brak obecności" : null, item.decisionStatus == 2 ? "Niezdecydowanny" : null, item.decisionStatus == 3 ? "Potwierdzony" : null), /*#__PURE__*/react.createElement("div", {
+  }, /*#__PURE__*/react.createElement("h1", null, item.firstName, " ", item.lastName), /*#__PURE__*/react.createElement("p", null, "Status:", " ", item.decisionStatus == 0 ? "Nieokreślony" : null, item.decisionStatus == 1 ? "Brak obecności" : null, item.decisionStatus == 2 ? "Niezdecydowany" : null, item.decisionStatus == 3 ? "Potwierdzony" : null), /*#__PURE__*/react.createElement("div", {
     className: Popup_style("btnWrapper")
   }, /*#__PURE__*/react.createElement("button", {
     onClick: () => handleStatus(3, item)
