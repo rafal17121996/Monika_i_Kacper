@@ -31500,8 +31500,8 @@ function Mapa(props) {
       setOpen(true);
     },
     position: {
-      lat: 52.592565439263026,
-      lng: 17.26062372076317
+      lat: 52.589556806096844,
+      lng: 17.262475830681502
     }
   }, open && /*#__PURE__*/react.createElement(lib/* InfoWindow */.nx, {
     onCloseClick: () => {
@@ -31581,7 +31581,7 @@ var Map = () => {
     className: Map_style("right")
   }, /*#__PURE__*/react.createElement("div", {
     className: Map_style("location")
-  }, /*#__PURE__*/react.createElement("h2", null, "\u015Alub odb\u0119dzie si\u0119"), /*#__PURE__*/react.createElement("p", null, "03.07.2021 o godz. 16:00 ", /*#__PURE__*/react.createElement("br", null), "W ko\u015Bciele pw. Naj\u015Bwi\u0119tszego Serca ", /*#__PURE__*/react.createElement("br", null), "Pana Jezusa w Kiszkowie")), /*#__PURE__*/react.createElement("div", {
+  }, /*#__PURE__*/react.createElement("h2", null, "\u015Alub odb\u0119dzie si\u0119"), /*#__PURE__*/react.createElement("p", null, "03.07.2021 o godz. 16:00 ", /*#__PURE__*/react.createElement("br", null), "W ko\u015Bciele \u015Bw. Jana Chrzciciela ", /*#__PURE__*/react.createElement("br", null), "w Kiszkowie")), /*#__PURE__*/react.createElement("div", {
     className: Map_style("location")
   }, /*#__PURE__*/react.createElement("h2", null, "Po ceremonii ko\u015Bcielnej"), /*#__PURE__*/react.createElement("p", null, "Zapraszamy na przyj\u0119cie weselne, ", /*#__PURE__*/react.createElement("br", null), " kt\xF3re odb\u0119dzie si\u0119 w Restauracji ", /*#__PURE__*/react.createElement("br", null), " Stary Kamionek w Kamionku")), /*#__PURE__*/react.createElement("div", {
     className: Map_style("map")
