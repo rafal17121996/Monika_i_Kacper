@@ -31742,7 +31742,7 @@ var Photos = () => {
 /* harmony default export */ const Photos_Photos = ((/* unused pure expression or super */ null && (Photos)));
 ;// CONCATENATED MODULE: ./src/components/Gallery/Gallery.module.scss
 // extracted by mini-css-extract-plugin
-/* harmony default export */ const Gallery_module = ({"Gallery":"Gallery"});
+/* harmony default export */ const Gallery_module = ({"Gallery":"Gallery","Gallery__info1":"Gallery__info1","Gallery__info2":"Gallery__info2","Gallery__link":"Gallery__link"});
 ;// CONCATENATED MODULE: ./src/components/Gallery/Gallery.jsx
 
 
@@ -31755,7 +31755,14 @@ var Gallery = () => {
     className: Gallery_style('')
   }, /*#__PURE__*/react.createElement("img", {
     src: "https://img.icons8.com/carbon-copy/100/000000/camera--v1.png"
-  }), /*#__PURE__*/react.createElement("h2", null, "Zajrzyjcie tu tak\u017Ce po \u015Blubie!"), /*#__PURE__*/react.createElement("p", null, "Gdy tylko otrzymamy zdj\u0119cia i film z uroczysto\u015Bci umie\u015Bcimy je na stronie, dzi\u0119ki czemu b\u0119dziecie mieli mo\u017Cliwo\u015B\u0107 obejrze\u0107 je oraz pobra\u0107."));
+  }), /*#__PURE__*/react.createElement("h2", {
+    className: Gallery_style('info1')
+  }, "Ju\u017C s\u0105!"), /*#__PURE__*/react.createElement("h2", {
+    className: Gallery_style('info2')
+  }, "Uwiecznione na zdj\u0119ciach wspomnienia naszego wielkiego dnia. Wr\xF3\u0107cie z nami na chwile my\u015Blami to tego pi\u0119knego lipcowego popo\u0142udnia."), /*#__PURE__*/react.createElement("a", {
+    className: Gallery_style('link'),
+    href: "https://picti.net/XCa6f"
+  }, "Zobacz zdj\u0119cia!"));
 };
 
 /* harmony default export */ const Gallery_Gallery = (Gallery);
@@ -31933,6 +31940,7 @@ var Info = () => {
   }, /*#__PURE__*/react.createElement("div", {
     className: Info_style("left")
   }, /*#__PURE__*/react.createElement("h1", null, "Bierzemy \u015Alub!"), /*#__PURE__*/react.createElement("span", null, "Mamy nadziej\u0119, \u017Ce b\u0119dziecie tego dnia razem z nami. Poni\u017Cej znajdziecie wszystkie niezb\u0119dne informacje organizacyjne oraz sekcj\u0119 \u201Epotwierdzanie obecno\u015Bci\u201D, w kt\xF3rej jednym klikni\u0119ciem zapiszecie si\u0119 na nasz \u015Blubny newsletter i powiadomicie o swoim przybyciu."), /*#__PURE__*/react.createElement("button", {
+    disabled: true,
     onClick: () => setIsOpen(true),
     className: Info_style("btn")
   }, "Potwierdz obecno\u015B\u0107!")), /*#__PURE__*/react.createElement("div", {
