@@ -24032,7 +24032,7 @@ function withRouter(Component) {
 }
 
 var useContext = react.useContext;
-function useHistory() {
+function react_router_useHistory() {
   if (false) {}
 
   return useContext(historyContext);
@@ -31612,8 +31612,8 @@ var Map = () => {
 ;// CONCATENATED MODULE: ./src/assets/music.jpg
 /* harmony default export */ const music = (__webpack_require__.p + "dfe85202446955ab55df01d1fd15c2c5.jpg");
 // EXTERNAL MODULE: ./node_modules/axios/index.js
-var axios = __webpack_require__(9669);
-var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
+var node_modules_axios = __webpack_require__(9669);
+var axios_default = /*#__PURE__*/__webpack_require__.n(node_modules_axios);
 ;// CONCATENATED MODULE: ./src/components/Music/Music.jsx
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -31817,7 +31817,7 @@ var Contact = () => {
 ;// CONCATENATED MODULE: ./src/assets/info.jpeg
 /* harmony default export */ const info = (__webpack_require__.p + "0068d95dcc7823631cd4731c72379ad3.jpeg");
 ;// CONCATENATED MODULE: ./src/assets/bg.jpg
-/* harmony default export */ const bg = (__webpack_require__.p + "9e5ed1db36a85df96c3a6de356ce982b.jpg");
+/* harmony default export */ const assets_bg = (__webpack_require__.p + "9e5ed1db36a85df96c3a6de356ce982b.jpg");
 ;// CONCATENATED MODULE: ./src/components/Popup/Popup.module.scss
 // extracted by mini-css-extract-plugin
 /* harmony default export */ const Popup_module = ({"Popup__popup_background":"Popup__popup_background","Popup__popup":"Popup__popup","Popup__close":"Popup__close","Popup__btnWrapper":"Popup__btnWrapper","Popup__guest":"Popup__guest","Popup":"Popup"});
@@ -31830,13 +31830,13 @@ var Contact = () => {
 
 var Popup_style = (0,bem_css_modules/* default */.Z)(Popup_module);
 
-var Popup = (_ref) => {
+var Popup_Popup = (_ref) => {
   var {
     open,
     onClose
   } = _ref;
   if (!open) return null;
-  var [guests, setGuests] = (0,react.useState)([]);
+  var [guests, setGuests] = useState([]);
   var history = useHistory();
 
   var updateList = () => {
@@ -31847,7 +31847,7 @@ var Popup = (_ref) => {
         ApiKij: "12nfhfkjaha983ZKsakjh12989S11"
       }
     };
-    axios_default().get("https://weddingonline-test.azurewebsites.net/api/guest/getguests/".concat(guest), config).then(response => {
+    axios.get("https://weddingonline-test.azurewebsites.net/api/guest/getguests/".concat(guest), config).then(response => {
       console.log(response);
       setGuests(response.data);
     }).catch(error => {
@@ -31855,7 +31855,7 @@ var Popup = (_ref) => {
     });
   };
 
-  (0,react.useEffect)(() => {
+  useEffect(() => {
     updateList();
   }, [history]);
 
@@ -31865,7 +31865,7 @@ var Popup = (_ref) => {
     }
   };
 
-  (0,react.useEffect)(() => {
+  useEffect(() => {
     document.addEventListener("keydown", escFunction, false);
     return () => {
       document.removeEventListener("keydown", escFunction, false);
@@ -31884,7 +31884,7 @@ var Popup = (_ref) => {
       guestConfirmationCode: item.guestConfirmationCode,
       decisionStatus: number
     };
-    axios_default().post("https://weddingonline-test.azurewebsites.net/api/guest/confirm", data, config).then(response => {
+    axios.post("https://weddingonline-test.azurewebsites.net/api/guest/confirm", data, config).then(response => {
       console.log(response);
       updateList();
     }).catch(error => {
@@ -31892,33 +31892,33 @@ var Popup = (_ref) => {
     });
   };
 
-  return /*#__PURE__*/react_dom.createPortal( /*#__PURE__*/react.createElement("div", {
+  return /*#__PURE__*/ReactDom.createPortal( /*#__PURE__*/React.createElement("div", {
     className: Popup_style("")
-  }, /*#__PURE__*/react.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", {
     className: Popup_style("popup_background")
-  }), /*#__PURE__*/react.createElement("div", {
+  }), /*#__PURE__*/React.createElement("div", {
     className: Popup_style("popup")
-  }, guests.map(item => /*#__PURE__*/react.createElement("div", {
+  }, guests.map(item => /*#__PURE__*/React.createElement("div", {
     className: Popup_style("guest"),
     key: item.firstName
-  }, /*#__PURE__*/react.createElement("h1", null, item.firstName, " ", item.lastName), /*#__PURE__*/react.createElement("p", null, "Status:", " ", item.decisionStatus == 0 ? "Nieokreślony" : null, item.decisionStatus == 1 ? "Brak obecności" : null, item.decisionStatus == 2 ? "Niezdecydowany" : null, item.decisionStatus == 3 ? "Potwierdzony" : null), /*#__PURE__*/react.createElement("div", {
+  }, /*#__PURE__*/React.createElement("h1", null, item.firstName, " ", item.lastName), /*#__PURE__*/React.createElement("p", null, "Status:", " ", item.decisionStatus == 0 ? "Nieokreślony" : null, item.decisionStatus == 1 ? "Brak obecności" : null, item.decisionStatus == 2 ? "Niezdecydowany" : null, item.decisionStatus == 3 ? "Potwierdzony" : null), /*#__PURE__*/React.createElement("div", {
     className: Popup_style("btnWrapper")
-  }, /*#__PURE__*/react.createElement("button", {
+  }, /*#__PURE__*/React.createElement("button", {
     onClick: () => handleStatus(3, item)
-  }, "Bawimy si\u0119 z Wami do rana"), /*#__PURE__*/react.createElement("button", {
+  }, "Bawimy si\u0119 z Wami do rana"), /*#__PURE__*/React.createElement("button", {
     onClick: () => handleStatus(2, item)
-  }, "Jeszcze nie wiemy"), /*#__PURE__*/react.createElement("button", {
+  }, "Jeszcze nie wiemy"), /*#__PURE__*/React.createElement("button", {
     onClick: () => handleStatus(1, item)
-  }, "Niestety nas nie b\u0119dzie")))), /*#__PURE__*/react.createElement("div", {
+  }, "Niestety nas nie b\u0119dzie")))), /*#__PURE__*/React.createElement("div", {
     onClick: () => onClose(),
     className: Popup_style("close")
-  }, /*#__PURE__*/react.createElement("i", {
+  }, /*#__PURE__*/React.createElement("i", {
     onClick: () => onClose(),
     className: "fas fa-times"
   })))), document.getElementById("portal"));
 };
 
-/* harmony default export */ const Popup_Popup = (Popup);
+/* harmony default export */ const components_Popup_Popup = ((/* unused pure expression or super */ null && (Popup_Popup)));
 ;// CONCATENATED MODULE: ./src/components/Info/Info.jsx
 
 
@@ -31929,40 +31929,40 @@ var Popup = (_ref) => {
 var Info_style = (0,bem_css_modules/* default */.Z)(Info_module);
 
 var Info = () => {
-  var [isOpen, setIsOpen] = (0,react.useState)(false);
-  return /*#__PURE__*/react.createElement("div", {
+  var [isOpen, setIsOpen] = useState(false);
+  return /*#__PURE__*/React.createElement("div", {
     style: {
       backgroundImage: "url(".concat(bg, ")")
     },
     className: Info_style("")
-  }, /*#__PURE__*/react.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", {
     className: Info_style("wrapper")
-  }, /*#__PURE__*/react.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", {
     className: Info_style("left")
-  }, /*#__PURE__*/react.createElement("h1", null, "Bierzemy \u015Alub!"), /*#__PURE__*/react.createElement("span", null, "Mamy nadziej\u0119, \u017Ce b\u0119dziecie tego dnia razem z nami. Poni\u017Cej znajdziecie wszystkie niezb\u0119dne informacje organizacyjne oraz sekcj\u0119 \u201Epotwierdzanie obecno\u015Bci\u201D, w kt\xF3rej jednym klikni\u0119ciem zapiszecie si\u0119 na nasz \u015Blubny newsletter i powiadomicie o swoim przybyciu."), /*#__PURE__*/react.createElement("button", {
+  }, /*#__PURE__*/React.createElement("h1", null, "Bierzemy \u015Alub!"), /*#__PURE__*/React.createElement("span", null, "Mamy nadziej\u0119, \u017Ce b\u0119dziecie tego dnia razem z nami. Poni\u017Cej znajdziecie wszystkie niezb\u0119dne informacje organizacyjne oraz sekcj\u0119 \u201Epotwierdzanie obecno\u015Bci\u201D, w kt\xF3rej jednym klikni\u0119ciem zapiszecie si\u0119 na nasz \u015Blubny newsletter i powiadomicie o swoim przybyciu."), /*#__PURE__*/React.createElement("button", {
     disabled: true,
     onClick: () => setIsOpen(true),
     className: Info_style("btn")
-  }, "Potwierdz obecno\u015B\u0107!")), /*#__PURE__*/react.createElement("div", {
+  }, "Potwierdz obecno\u015B\u0107!")), /*#__PURE__*/React.createElement("div", {
     className: Info_style("right")
-  }, /*#__PURE__*/react.createElement("figure", null, /*#__PURE__*/react.createElement("img", {
-    src: info,
+  }, /*#__PURE__*/React.createElement("figure", null, /*#__PURE__*/React.createElement("img", {
+    src: img,
     alt: ""
-  })), /*#__PURE__*/react.createElement(Popup_Popup, {
+  })), /*#__PURE__*/React.createElement(Popup, {
     open: isOpen,
     onClose: () => setIsOpen(false)
-  }))), /*#__PURE__*/react.createElement("svg", {
+  }))), /*#__PURE__*/React.createElement("svg", {
     className: Info_style("wave"),
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 1440 320"
-  }, /*#__PURE__*/react.createElement("path", {
+  }, /*#__PURE__*/React.createElement("path", {
     fill: "#8b9f81",
     fillOpacity: "1",
     d: "M0,192L48,208C96,224,192,256,288,250.7C384,245,480,203,576,197.3C672,192,768,224,864,208C960,192,1056,128,1152,112C1248,96,1344,128,1392,144L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
   })));
 };
 
-/* harmony default export */ const Info_Info = (Info);
+/* harmony default export */ const Info_Info = ((/* unused pure expression or super */ null && (Info)));
 ;// CONCATENATED MODULE: ./src/assets/history2.jpeg
 /* harmony default export */ const history2 = (__webpack_require__.p + "e34daf2f7eb739596e33c52de26aab03.jpeg");
 // EXTERNAL MODULE: ./node_modules/read-more-react/dist/index.js
@@ -32046,7 +32046,7 @@ var App = () => {
   }, /*#__PURE__*/react.createElement(Switch, null, /*#__PURE__*/react.createElement(Route, {
     exact: true,
     path: "/:item",
-    render: () => /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement(Navbar_Navbar, null), /*#__PURE__*/react.createElement(components_Home_Home, null), /*#__PURE__*/react.createElement(Info_Info, null), /*#__PURE__*/react.createElement(Map_Map, null), /*#__PURE__*/react.createElement(History_History, null), /*#__PURE__*/react.createElement(Music_Music, null), /*#__PURE__*/react.createElement(Contact_Contact, null), /*#__PURE__*/react.createElement(Gallery_Gallery, null))
+    render: () => /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement(Navbar_Navbar, null), /*#__PURE__*/react.createElement(components_Home_Home, null), /*#__PURE__*/react.createElement(Map_Map, null), /*#__PURE__*/react.createElement(History_History, null), /*#__PURE__*/react.createElement(Music_Music, null), /*#__PURE__*/react.createElement(Contact_Contact, null), /*#__PURE__*/react.createElement(Gallery_Gallery, null))
   }), /*#__PURE__*/react.createElement(Route, {
     path: "/",
     render: () => /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement(Navbar_Navbar, null), /*#__PURE__*/react.createElement(components_Home_Home, null), /*#__PURE__*/react.createElement(Map_Map, null), /*#__PURE__*/react.createElement(History_History, null), /*#__PURE__*/react.createElement(Music_Music, null), /*#__PURE__*/react.createElement(Contact_Contact, null), /*#__PURE__*/react.createElement(Gallery_Gallery, null))
